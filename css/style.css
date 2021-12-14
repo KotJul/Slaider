@@ -8,6 +8,7 @@
     width: 100%;
     height: 800px;
     position: relative;
+    overflow:hidden;/*убирает скрол при переполнении контейнера*/
 }
 .banner-img-list,
 .banner-img{
@@ -25,11 +26,16 @@
 }
 .banner-nav-list{
     position: absolute;
-    right: 0px;
+    right: -15%;/*убираем в право за окно*/
     top: 0px;
     height: 100%;
     width: 20%;
     background: rgba(0, 0, 0, .4);
+    transition: all .3s;
+}
+.banner-nav-list:hover{
+    transition: all .3s;
+    right: 0%;/*единици измерения должны быть одинаковые*/
 }
 .banner-nav-list ul{
     list-style: none;
